@@ -29,13 +29,6 @@
         "description": "The project in the Media Services Functions samples to deploy. Choose the name that matches the folder name containing the functions samples that you wish to deploy."
       }
     },
-    "sourceCodeRepositoryURL": {
-      "type": "string",
-      "defaultValue": "ENTER PATH to YOUR FORK of https://github.com/Azure-Samples/media-services-dotnet-functions-integration",
-      "metadata": {
-        "description": "Source code repository URL. Is is REQUIRED that you first fork the samples repository and point this to your fork. If you are using your own fork, you may see an error in deployment related to GitHub auth. We require this for your own good, as we may update and break your application or testing as we deploy new updates to the public samples repository."
-      }
-    },
     "sourceCodeBranch": {
       "type": "string",
       "defaultValue": "master",
@@ -156,7 +149,7 @@
             "[concat(resourceId('Microsoft.Web/sites/', variables('functionsAppName')),'/config/appsettings')]"
           ],
           "properties": {
-            "RepoUrl": "[parameters('sourceCodeRepositoryURL')]",
+            "RepoUrl": "https://github.com/Azure-Samples/media-services-dotnet-functions-integration",
             "branch": "[parameters('sourceCodeBranch')]",
             "IsManualIntegration": "false"
           }
