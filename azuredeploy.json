@@ -151,7 +151,7 @@
           "properties": {
             "RepoUrl": "https://github.com/Azure-Samples/media-services-dotnet-functions-integration",
             "branch": "[parameters('sourceCodeBranch')]",
-            "IsManualIntegration": "false"
+            "IsManualIntegration": true
           }
         },
         {
